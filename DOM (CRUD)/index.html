@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.css" integrity="sha512-zylce7fP6h4usg536JBTRj2rt7q22Z0qicHSlgSK53Irtfkz37ate3KCQ59du+aXZV6R3yyL2X1LyGKBEUMZaw==" crossorigin="anonymous" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container d-flex flex-column gap-3">
+      <h1 class="col-12 text-center">Inventory System</h1>
+      <div class="col-12 d-flex gap-3">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newPhoneModal">Add New Phone</button>
+      </div>
+
+      <table id="phoneData" class="table table-dark table-bordered">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Item Name</th>
+            <th>Item Price</th>
+            <th>Item Qty</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <div class="modal fade" id="newPhoneModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="d-flex flex-column p-4 col-12 bg-white rounded shadow border gap-3">
+              <h3>Add New Phone</h3>
+              <input class="form-control" id="nameInput" type="text" placeholder="Enter new phone Name" />
+              <input class="form-control" id="priceInput" type="text" placeholder="Enter new phone price" />
+              <input class="form-control" id="qtyInput" type="text" placeholder="Enter new phone qty" />
+              <button class="btn btn-success col-12" data-bs-dismiss="modal" onclick="addNewPhone()">Add New Phone</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="d-flex flex-column p-4 col-12 bg-white rounded shadow border gap-3">
+              <h3>Edit Phone Data</h3>
+              <input class="form-control" id="nameInputEdit" type="text" placeholder="Enter new phone Name" />
+              <input class="form-control" id="priceInputEdit" type="text" placeholder="Enter new phone price" />
+              <input class="form-control" id="qtyInputEdit" type="text" placeholder="Enter new phone qty" />
+              <button class="btn btn-info col-12" data-bs-dismiss="modal" onclick="saveUpdates()">Save Updates</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.js" integrity="sha512-GKxQGmCBqm3YHCZTdqD3Bvsz+AHRObqztq6xDo+68527RxgVw7wF1TR5ZSBvtWiz5qzpOzUGGvxJbT/6UzzSOQ==" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
