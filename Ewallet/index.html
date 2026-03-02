@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Wallet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  </head>
+  <body>
+    <div class="container d-flex flex-column gap-3">
+      <h1>Welcome : <span id="userNameSpan">User name</span></h1>
+      <h1>
+        Your Balance is :
+        <span id="balanceSpan">*****</span>
+        <i class="fa-solid fa-eye" data-bs-toggle="modal" data-bs-target="#passwordModal"></i>
+      </h1>
+
+      <div class="col-4 p-4 rounded shadow bg-white border d-flex flex-column gap-3">
+        <h3>Select Action to your balance</h3>
+        <input id="amountInput" class="form-control" type="number" placeholder="Enter Amount" />
+        <div class="col-12 d-flex">
+          <button onclick="widthdrawAmount()" class="btn btn-danger">Withdraw</button>
+          <button onclick="depositAmount()" class="btn btn-success">Deposit</button>
+        </div>
+      </div>
+
+      <table class="table table-bordered table-dark">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Before Balance</th>
+            <th>Tansaction Type</th>
+            <th>Amount</th>
+            <th>After Balance</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <tr>
+            <td>1</td>
+            <td>5000</td>
+            <td>Deposit</td>
+            <td>4000</td>
+            <td>9000</td>
+            <td>2026-02-10</td>
+          </tr> -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="passwordModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Enter your password</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <input id="passwordInput" type="text" placeholder="Enter your password" class="form-control" />
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="showBalance()">Show Balance</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
