@@ -10,14 +10,14 @@
     <div class="col-12 d-flex" style="height: 100vh">
       <div class="col-8 h-100 p-4 overflow-auto">
         <div class="d-flex gap-3">
-          <button class="btn btn-dark" onclick="filterProducts('Apple')">Apple Products</button>
+          <button class="btn btn-dark" onclick="filterProducts('Apple')">Apple</button>
           <button class="btn btn-dark" onclick="filterProducts('Samsung')">Samsung Products</button>
           <button class="btn btn-dark" onclick="filterProducts('Oppo')">Oppo Products</button>
           <button class="btn btn-danger" onclick="filterProducts('All')">Clear Fillters</button>
         </div>
         <div class="row g-3" id="productsDiv"></div>
       </div>
-      <div class="col-4 h-100 bg-warning p-4 overflow-auto">
+      <div class="col-4 h-100 border border-s p-4 overflow-auto">
         <h1>Your Cart</h1>
         <table class="table table-dark table-bordered align-middle">
           <thead>
@@ -40,6 +40,7 @@
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.js" integrity="sha512-GKxQGmCBqm3YHCZTdqD3Bvsz+AHRObqztq6xDo+68527RxgVw7wF1TR5ZSBvtWiz5qzpOzUGGvxJbT/6UzzSOQ==" crossorigin="anonymous"></script>
+    <script src="./data.js"></script>
     <script src="./index.js"></script>
   </body>
 </html>
